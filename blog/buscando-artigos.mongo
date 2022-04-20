@@ -1,0 +1,14 @@
+db.autores.find({
+    "artigos.slug": "banco-dados-para-todos"
+})
+
+db.autores.find({
+    "artigos.slug": "banco-dados-para-todos"
+}, {
+    "artigos.titulo": 1,
+    "artigos.conteudo": 1
+})
+
+db.autores.find({
+    nome: "Juliana Dantas"
+})

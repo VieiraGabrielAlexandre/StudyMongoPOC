@@ -1,0 +1,78 @@
+db.autores.update({
+    nome: "Gabriel Vieira"
+}, {
+    $set: {
+        artigos: [
+            {
+                slug: "dev-para-todos",
+                titulo: "Dev para todos",
+                conteudo: "Esse aqui é um conteudo para o mongo",
+                dataCriacao: ISODate('2019-06-04')
+            }
+        ]
+    }
+})
+
+db.autores.update({
+    nome: "Juliana Dantas"
+}, { 
+    $set: {
+        artigos: [
+            {
+                slug: "contab-para-todos",
+                titulo: "Contabilidade para todos",
+                conteudo: "Esse aqui é um conteudo de contabilidade",
+                dataCriacao: ISODate('2020-10-12')
+            },
+            {
+                slug: "gestao-para-todos",
+                titulo: "Gestão para todos",
+                conteudo: "Esse aqui é um conteudo de gestão",
+                dataCriacao: ISODate('2020-08-12')
+            }
+        ]
+    }
+})
+
+
+db.autores.update({
+    nome: "Alexandre Vieira"
+}, { 
+    $set: {
+        artigos: [
+            {
+                slug: "engenheria-para-todos",
+                titulo: "Engenharia para todos",
+                conteudo: "Esse aqui é um conteudo de engenharia",
+                dataCriacao: ISODate('2018-10-12')
+            },
+            {
+                slug: "gestao-para-todos",
+                titulo: "Gestão para todos",
+                conteudo: "Esse aqui é um conteudo de gestão",
+                dataCriacao: ISODate('2020-03-21')
+            }
+        ]
+    }
+})
+
+db.autores.update({
+    nome: "Gabriel Vieira"
+}, { 
+    $set: {
+        artigos: [
+            {
+                slug: "banco-dados-para-todos",
+                titulo: "Banco de Dados para todos",
+                conteudo: "Esse aqui é um conteudo de tecnologia banco de dados",
+                dataCriacao: ISODate('2018-10-12')
+            },
+            {
+                slug: "codigos-para-todos",
+                titulo: "Códigos para todos",
+                conteudo: "Esse aqui é um conteudo de gescodigostão",
+                dataCriacao: ISODate('2020-03-21')
+            }
+        ]
+    }
+})

@@ -1,0 +1,15 @@
+db.artigos.insertOne({
+    autor: 
+    {
+        nome: "Gabriel Vieira",
+        descricao: "Desenvolvedor do mundo",
+        email: "gabriel@vieira.com",
+        senha: "teste"
+    },
+    slug: "banco-dados-para-todos",
+    titulo: "Banco de Dados para todos",
+    conteudo: "Esse aqui é um conteudo de tecnologia banco de dados",
+    dataCriacao: ISODate('2018-10-12')
+})
+
+db.artigos.find({ slug: "banco-dados-para-todos" })

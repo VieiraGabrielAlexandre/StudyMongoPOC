@@ -1,0 +1,17 @@
+
+
+db.artigos.updateOne({ titulo: "Códigos para todos"}, { $set: {
+    categorias: ["Programação", "Carreira"] }
+})
+
+db.artigos.updateOne({ titulo: "Contabilidade para todos"}, { $set: {
+    categorias: ["Financeiro", "Contabilidade"] }
+})
+
+db.artigos.updateOne({ titulo: "Gestão para todos"}, { $set: {
+    categorias: ["Gestão Financeira"] }
+})
+
+db.artigos.updateOne({ titulo: "Engenharia para todos"}, { $set: {
+    categorias: ["Engenharia de Software", "Carreiras"] }
+})

@@ -1,0 +1,14 @@
+db.autores.insertMany([
+    {
+        nome: "Juliana Dantas",
+        descricao: "Incivel contadora", 
+        email: "juliana@vieira.com",
+        senha: "teste"
+    }, {
+        nome: "Alexandre Vieira",
+        descricao: "Incrivel ENG",
+        email: "alexandre@vieira.com",
+        senha: "teste"
+    }
+])
+
