@@ -1,6 +1,6 @@
 
 //Insere os comentários
-db.artigos.update({ slug: "visualizando-dados-de-frequencia" },
+db.artigos.update({ slug: "banco-dados-para-todos" },
     {
     $set: {
         comentarios: [
@@ -63,7 +63,7 @@ db.artigos.update({ slug: "visualizando-dados-de-frequencia" },
     }
 );
 
-db.artigos.update({ slug: "faculdade-e-diploma-sao-necessarios-para-programar" },
+db.artigos.update({ slug: "codigos-para-todos" },
     {
     $set: {
         comentarios: [
@@ -108,7 +108,7 @@ db.artigos.update({ slug: "faculdade-e-diploma-sao-necessarios-para-programar" }
     }
 );
 
-db.artigos.update({ slug: "conhecendo-o-flutter-e-uma-visao-do-desenvolvimento-mobile" },
+db.artigos.update({ slug: "gestao-para-todos" },
     {
     $set: {
         comentarios: [
@@ -159,7 +159,7 @@ db.artigos.update({ slug: "conhecendo-o-flutter-e-uma-visao-do-desenvolvimento-m
     }
 );
 
-db.artigos.update({ slug: "criando-e-publicando-uma-biblioteca-javascript-no-npm" },
+db.artigos.update({ slug: "contab-para-todos" },
     {
     $set: {
         comentarios: [

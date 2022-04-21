@@ -1,0 +1,53 @@
+db.infoAutores.insertOne({
+    nome: "Amorinha",
+    email: "amorinha@teste.com",
+    senha: "1243324",
+    descricao: "Amorinha de papai mais linda"
+})
+
+var autorInfo = db.infoAutores.findOne({
+    email: "amorinha@teste.com"
+})
+
+db.artigos.insertOne({
+    autor: {
+        nome: autorInfo.nome,
+        descricao: autorInfo.descricao,
+        id_info: autorInfo._id
+    },
+    slug: "go-para-todos",
+    titulo: "Go Lang para todos",
+    conteudo: "Go lang uma linguagem incrível, que estou desenvolvendo coisas",
+    dataCriacao: ISODate("2022-08-01"),
+    categorias: [
+        "Programação"
+    ], comentarios: []
+})
+
+
+var comentario = db.artigos.findOneAndUpdate({
+    slug: "go-para-todos"
+}, {
+    $push: {
+        comentarios: {
+            $each: [
+                {
+                    nome: "Gabriel papai",
+                    email: "papai@teste.com",
+                    texto: "Amorinha para de chorar",
+                    data: ISODate("2022-04-21")
+                }
+            ],
+            $position: 0
+        }
+    }
+}, {
+    returnNewDocument: true
+})
+
+db.comentarios.insertOne({
+    nome: "Gabriel papai",
+    email: "papai@teste.com",
+    texto: "Amorinha para de chorar",
+    data: ISODate("2022-04-21")
+})

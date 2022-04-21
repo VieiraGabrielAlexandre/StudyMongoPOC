@@ -1,0 +1,35 @@
+db.artigos.update({
+    slug: "banco-dados-para-todos"
+}, {
+    $pop: {
+        comentarios: 1
+    }
+})
+
+var documento = db.artigos.findOneAndUpdate({
+    slug: "banco-dados-para-todos"
+}, {
+    $push: {
+        comentarios: {
+            $each: [
+                {
+                    nome: "Gabriel",
+                    email: "gabriel@vieira.com",
+                    texto: "Top",
+                    data: ISODate('2022-04-20')
+                }
+            ], 
+            $position: 0,
+        }
+    }
+}, {
+    returnNewDocument: true
+})
+
+db.comentarios.insertOne({
+    id_artigo: documento._id,
+    nome: "Gabriel",
+    email: "gabriel@vieira.com",
+    texto: "Top",
+    data: ISODate('2022-04-20')
+})
